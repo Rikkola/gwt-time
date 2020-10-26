@@ -3419,7 +3419,7 @@ public final class DateTimeFormatterBuilder {
             if (context.subSequenceEquals(text, position, "UT", 0, 2)) {
                 return parseOffset(context, text, position, "UT");
             }
-			LOGGER.debug("parse {} from position {} in context {}", text, position, context);
+			// LOGGER.debug("parse {} from position {} in context {}", text, position, context);
 
             // this is a poor implementation that handles some but not all of the spec
             // JDK8 has a lot of extra information here
