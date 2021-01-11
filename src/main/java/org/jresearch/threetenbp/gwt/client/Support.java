@@ -14,7 +14,6 @@ import org.gwtproject.typedarrays.shared.Uint8Array;
 import org.gwtproject.xhr.client.ReadyStateChangeHandler;
 import org.gwtproject.xhr.client.XMLHttpRequest;
 import org.gwtproject.xhr.client.XMLHttpRequest.ResponseType;
-import org.jresearch.threetenbp.gwt.client.cldr.LocaleInfo;
 import org.jresearch.threetenbp.gwt.client.loader.TimeJsBundle;
 import org.jresearch.threetenbp.gwt.client.locale.Locales;
 import org.slf4j.Logger;
@@ -176,7 +175,8 @@ public class Support {
 	}
 
 	public static Locale toLocale(String langTag) {
-		return Stream.of(LocaleInfo.LOCALES).filter(l -> langTag.equalsIgnoreCase(l.toLanguageTag())).findAny().orElseGet(() -> createLocale(langTag));
+		return null;
+//		return Stream.of(LocaleInfo.LOCALES).filter(l -> langTag.equalsIgnoreCase(l.toLanguageTag())).findAny().orElseGet(() -> createLocale(langTag));
 	}
 
 	public static Locale createLocale(String langTag) {
